@@ -1,0 +1,101 @@
+{
+  "name": "jackywxd/gatsby-material-starter",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Jacky Wu Blog",
+  "branch": "",
+  "style": {
+    "name": "Future",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "\"Avenir Next\", Helvetica, sans-serif",
+    "heading": {
+      "fontWeight": 500,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.2em"
+    },
+    "alternativeText": {
+      "textTransform": "uppercase",
+      "fontWeight": 400,
+      "letterSpacing": "0.2em",
+      "opacity": 0.75
+    },
+    "colors": {
+      "text": "#333",
+      "background": "#fff",
+      "primary": "#666",
+      "secondary": "#888",
+      "highlight": "#1f80ff",
+      "muted": "#f6f6f6",
+      "border": "#eee"
+    },
+    "layout": {
+      "centered": true,
+      "maxWidth": 1024,
+      "bannerHeight": "80vh"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://vagr9k.github.io/gatsby-material-starter/",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/jackywxd/gatsby-material-starter",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/gatsby-starter-material",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "gatsby-material-starter",
+      "subhead": "A blog starter with Material design in mind for GatsbyJS.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "gatsby-material-starter: A blog starter with Material design in mind for GatsbyJS.",
+          "url": "https://vagr9k.github.io/gatsby-material-starter/"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "jackywxd",
+          "repo": "gatsby-material-starter"
+        }
+      ],
+      "text": "v1.1.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<p><a href=\"https://codeclimate.com/github/Vagr9K/gatsby-material-starter\"><img src=\"https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/gpa.svg\"></a>\n<a href=\"https://codeclimate.com/github/Vagr9K/gatsby-material-starter\"><img src=\"https://codeclimate.com/github/Vagr9K/gatsby-material-starter/badges/issue_count.svg\"></a>\n<a href=\"https://www.codacy.com/app/Vagr9K/gatsby-material-starter?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Vagr9K/gatsby-material-starter&amp;utm_campaign=Badge_Grade\"><img src=\"https://api.codacy.com/project/badge/Grade/990fb54ea8094f2aa0ed77f14e859820\"></a></p>\n<div>\n    <img src=\"docs/logo.png\">\n</div>\n\n<h1>Gatsby Material Starter</h1>\n<p>A blog starter with Material design in mind for <a href=\"https://github.com/gatsbyjs/gatsby/\">Gatsby</a>.</p>\n<p><a href=\"https://vagr9k.github.io/gatsby-material-starter/\">Demo website.</a></p>\n<p><img src=\"docs/screenshot.png\"></p>\n<h2>GatsbyJS V1</h2>\n<p>This starter is based on GatsbyJS V1, which brings progressive web app features such as automatic code and data splitting (by route), prefetching, with service worker/offline-first support and PRPL pattern.</p>\n<p>More information in the <a href=\"https://www.gatsbyjs.org/blog/gatsby-first-beta-release/\">announcement</a>.</p>\n<h2>Features</h2>\n<ul>\n<li>Blazing fast loading times thanks to pre-rendered HTML and automatic chunk loading of JS files</li>\n<li><a href=\"https://github.com/mlaursen/react-md\">React-MD</a> for Material design<ul>\n<li>Integrated FontAwesome support</li>\n<li>Integrated Material Icons support</li>\n</ul>\n</li>\n<li>SASS/SCSS styling</li>\n<li>Separate components for everything</li>\n<li>High configurability:<ul>\n<li>User information</li>\n<li>User social profiles</li>\n<li>Copyright information</li>\n<li>More!</li>\n</ul>\n</li>\n<li>Author segment<ul>\n<li>Name</li>\n<li>Location</li>\n<li>Description</li>\n<li>Links</li>\n<li>Follow Me button</li>\n</ul>\n</li>\n<li>Posts in Markdown<ul>\n<li>Code syntax highlighting</li>\n<li>Embedded YouTube videos</li>\n<li>Embedded Tweets</li>\n</ul>\n</li>\n<li>Tags<ul>\n<li>Seprate page for posts under each tag</li>\n</ul>\n</li>\n<li>Categories<ul>\n<li>Separate page for posts under each category</li>\n</ul>\n</li>\n<li>Suggested posts segment</li>\n<li>Disqus support<ul>\n<li>Notifications about new disqus comments</li>\n</ul>\n</li>\n<li>Google Analytics support</li>\n<li>Responsive design<ul>\n<li>On mobile, Disqus is loaded only after expanding comments for better performance</li>\n</ul>\n</li>\n<li>Social features<ul>\n<li>Twitter tweet button</li>\n<li>Facebook share/share count</li>\n<li>Reddit share/share count</li>\n<li>Google+ share button</li>\n<li>LinkedIn share button</li>\n<li>Telegram share button</li>\n</ul>\n</li>\n<li>SEO<ul>\n<li>Sitemap generation</li>\n<li>robots.txt</li>\n<li>General description tags</li>\n<li>Schema.org JSONLD (Google Rich Snippets)</li>\n<li>OpenGraph Tags (Facebook/Google+/Pinterest)</li>\n<li>Twitter Tags (Twitter Cards)</li>\n</ul>\n</li>\n<li>RSS feeds</li>\n<li>Loading progress for slow networks</li>\n<li>Offline support</li>\n<li>Web App Manifest support</li>\n<li>Development tools<ul>\n<li>ESLint for linting</li>\n<li>Prettier for code style</li>\n<li>Remark-Lint for linting Markdown</li>\n<li>write-good for linting English prose</li>\n<li>gh-pages for deploying to GitHub pages</li>\n<li>CodeClimate configuration file and badge</li>\n</ul>\n</li>\n</ul>\n<p>NOTE: Take a look at <a href=\"https://github.com/Vagr9K/gatsby-advanced-starter\">gatsby-advanced-starter</a> if you prefer building UI from scratch and/or only interested in fundamental features.</p>\n<p>You can also visit <a href=\"https://vagr9k.me\">my personal blog</a> if you want to see a fully implemented blog based on this starter.</p>\n<p><img src=\"docs/screenshot-article.png\">\n<img src=\"docs/screenshot-mobile.png\"></p>\n<h2>Getting Started</h2>\n<p>Install this starter (assuming <a href=\"https://github.com/gatsbyjs/gatsby/\">Gatsby</a> is installed) by running from your CLI:</p>\n<pre>gatsby new YourProjectName https://github.com/Vagr9K/gatsby-material-starter\nnpm run serve</pre><p>Or you can fork the project, make your changes there and merge new features when needed.</p>\n<p>Alternatively:</p>\n<pre>git <span class=\"hljs-built_in\">clone</span> https://github.com/Vagr9K/gatsby-material-starter YourProjectName <span class=\"hljs-comment\"># Clone the project</span>\n<span class=\"hljs-built_in\">cd</span> YourProjectname\nrm -rf .git <span class=\"hljs-comment\"># So you can have your own changes stored in VCS.</span>\nnpm install <span class=\"hljs-comment\"># or yarn</span>\nnpm run serve</pre><h2>Configuration</h2>\n<p> Edit the export object in <code>data/SiteConfig</code>:</p>\n<pre><span class=\"hljs-built_in\">module</span>.exports = {\n  <span class=\"hljs-attr\">blogPostDir</span>: <span class=\"hljs-string\">&apos;sample-posts&apos;</span>, <span class=\"hljs-comment\">// The name of directory that contains your posts.</span>\n  siteTitle: <span class=\"hljs-string\">&apos;Gatsby Material Starter&apos;</span>, <span class=\"hljs-comment\">// Site title.</span>\n  siteTitleAlt: <span class=\"hljs-string\">&apos;GatsbyJS Material Starter&apos;</span>, <span class=\"hljs-comment\">// Alternative site title for SEO.</span>\n  siteLogo: <span class=\"hljs-string\">&apos;/logos/logo-1024.png&apos;</span>, <span class=\"hljs-comment\">// Logo used for SEO and manifest.</span>\n  siteUrl: <span class=\"hljs-string\">&apos;https://vagr9k.github.io&apos;</span>, <span class=\"hljs-comment\">// Domain of your website without pathPrefix.</span>\n  pathPrefix: <span class=\"hljs-string\">&apos;/gatsby-material-starter&apos;</span>, <span class=\"hljs-comment\">// Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.</span>\n  siteDescription: <span class=\"hljs-string\">&apos;A GatsbyJS stater with Material design in mind.&apos;</span>, <span class=\"hljs-comment\">// Website description used for RSS feeds/meta description tag.</span>\n  siteRss: <span class=\"hljs-string\">&apos;/rss.xml&apos;</span>, <span class=\"hljs-comment\">// Path to the RSS file.</span>\n  siteFBAppID: <span class=\"hljs-string\">&apos;1825356251115265&apos;</span>, <span class=\"hljs-comment\">// FB Application ID for using app insights</span>\n  siteGATrackingID: <span class=\"hljs-string\">&apos;UA-47311644-4&apos;</span>, <span class=\"hljs-comment\">// Tracking code ID for google analytics.</span>\n  disqusShortname: <span class=\"hljs-string\">&apos;https-vagr9k-github-io-gatsby-material-starter&apos;</span>, <span class=\"hljs-comment\">// Disqus shortname.</span>\n  postDefaultCategoryID: <span class=\"hljs-string\">&apos;Tech&apos;</span>, <span class=\"hljs-comment\">// Default category for posts.</span>\n  userName: <span class=\"hljs-string\">&apos;Material User&apos;</span>, <span class=\"hljs-comment\">// Username to display in the author segment.</span>\n  userTwitter: <span class=\"hljs-string\">&apos;&apos;</span>, <span class=\"hljs-comment\">// Optionally renders &quot;Follow Me&quot; in the UserInfo segment.</span>\n  userLocation: <span class=\"hljs-string\">&apos;North Pole, Earth&apos;</span>, <span class=\"hljs-comment\">// User location to display in the author segment.</span>\n  userAvatar: <span class=\"hljs-string\">&apos;https://api.adorable.io/avatars/150/test.png&apos;</span>, <span class=\"hljs-comment\">// User avatar to display in the author segment.</span>\n  userDescription: <span class=\"hljs-string\">&quot;Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven&apos;t seen you in a year. And the good thing about dogs... is they got different dogs for different people.&quot;</span>, <span class=\"hljs-comment\">// User description to display in the author segment.</span>\n  <span class=\"hljs-comment\">// Links to social profiles/projects you want to display in the author segment/navigation bar.</span>\n  userLinks: [\n    {\n      <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">&apos;GitHub&apos;</span>,\n      <span class=\"hljs-attr\">url</span>: <span class=\"hljs-string\">&apos;https://github.com/Vagr9K/gatsby-material-starter&apos;</span>,\n      <span class=\"hljs-attr\">iconClassName</span>: <span class=\"hljs-string\">&apos;fa fa-github&apos;</span>,\n    },\n    {\n      <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">&apos;Twitter&apos;</span>,\n      <span class=\"hljs-attr\">url</span>: <span class=\"hljs-string\">&apos;https://twitter.com/Vagr9K&apos;</span>,\n      <span class=\"hljs-attr\">iconClassName</span>: <span class=\"hljs-string\">&apos;fa fa-twitter&apos;</span>,\n    },\n    {\n      <span class=\"hljs-attr\">label</span>: <span class=\"hljs-string\">&apos;Email&apos;</span>,\n      <span class=\"hljs-attr\">url</span>: <span class=\"hljs-string\">&apos;mailto:vagr9k@gmail.com&apos;</span>,\n      <span class=\"hljs-attr\">iconClassName</span>: <span class=\"hljs-string\">&apos;fa fa-envelope&apos;</span>,\n    },\n  ],\n  <span class=\"hljs-attr\">copyright</span>: <span class=\"hljs-string\">&apos;Copyright &#xA9; 2017. Material User&apos;</span>, <span class=\"hljs-comment\">// Copyright string for the footer of the website and RSS feed.</span>\n\n};</pre><p> You can also optionally set <code>pathPrefix</code>:</p>\n<pre> <span class=\"hljs-built_in\">module</span>.exports = {\n  <span class=\"hljs-comment\">// Note: it must *not* have a trailing slash.</span>\n       pathPrefix: <span class=\"hljs-string\">&apos;/gatsby-material-starter&apos;</span>, <span class=\"hljs-comment\">// Prefixes all links. For cases when deployed to example.github.io/gatsby-material-starter/.</span>\n}</pre><p> NOTE: <code>user*</code>, <code>disqusShortname</code> and <code>copyright</code> are optional and won&apos;t render if omitted.</p>\n<p> WARNING: Make sure to edit <code>static/robots.txt</code> to include your domain for the sitemap!</p>\n<h2>Theming</h2>\n<p>Edit <code>src/layouts/theme.scss</code> to suit your needs.\nYou can use <a href=\"https://react-md.mlaursen.com/customization/colors\">Material color palette</a> provided by React-MD.</p>\n<pre>@import &apos;~react-md/src/scss/react-md&apos;;\n$md-primary-color: $md-grey-400;\n$md-secondary-color: $md-red-800;\n$md-tertiary-color: $md-grey-300;</pre>"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/jackywxd/gatsby-material-starter",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/jackywxd",
+          "text": "jackywxd"
+        }
+      ]
+    }
+  ]
+}
