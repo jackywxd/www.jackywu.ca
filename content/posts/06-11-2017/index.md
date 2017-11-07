@@ -26,8 +26,9 @@ And the content of blog is produced with gatsby (https://www.gatsbyjs.org/), an 
 I designed a logo for this site. It is the initial of my name: JW.
 
 ![image of logo]
-(/logos/logo-1024.png "mylogo")
+(https://jackywu.ca/logos/logo-512.png)
 
 Moving forward I will blog my work and the adventure of my life in this site.
 
 OK enough for now! More to come, stay tuned.
+
