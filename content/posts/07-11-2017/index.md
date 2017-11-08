@@ -1,5 +1,5 @@
 ---
-title: "Hello World"
+title: "Pi Zero W Headless setup"
 cover: "/imgs/pi-zero-w.jpg"
 category: "tech"
 tags:
@@ -13,24 +13,27 @@ date: "07/11/2017"
 
 # SSH into Raspberry Pi Zero W
 
-Today I recevied the Pi Zero W which I ordered last week from adafru. Sweet! So I start play with it. I have been playing with Pi since the first version, and I thought it should be just pretty straight forward. But it ends up taking me few hours just to figure out how to remote SSH into it.
+Today I recevied a Pi Zero W which I ordered last week from adafru. Sweet! So I start playing with it. While I am a long time Raspberry pi player, I thought it should be pretty straight forward. But it ends up taking me few hours just to figure out how to remote SSH into it.
 
-
-Very good document how to setup pi zero w headless for wifi.
+Since this is a headless setup, I need to load the OS, enable Wifi and turn on SSH to allow me to remote ssh into it. Just little google I found a very good document showing the detail steps.
 http://desertbot.io/setup-pi-zero-w-headless-wifi/
 
-Enable ssh
+## Enable ssh
 
 For security reasons, ssh is no longer enabled by default. To enable it, run this command:
 ```
 touch /Volumes/boot/ssh
-Add Network Info
 ```
+
+### Add Network Info
 Create a new empty file that will hold network info:
+
 ```
 touch /Volumes/boot/wpa_supplicant.conf
 ```
+
 Edit the file that you just created and paste this into it (adjusting for the name of your country code, network name and network password):
+
 ```
 country=US
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
