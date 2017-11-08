@@ -32,7 +32,7 @@ module.exports = {
     },
     {
       label: "Facebook",
-      url: "https://facebook.com/jackywxd",
+      url: "https://facebook.com/jacky.wu.9235",
       iconClassName: "fa fa-facebook"
     },
     {
