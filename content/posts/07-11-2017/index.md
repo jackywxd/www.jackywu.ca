@@ -13,7 +13,7 @@ date: "07/11/2017"
 
 # SSH into Raspberry Pi Zero W
 
-Today I recevied a Pi Zero W which I ordered last week from adafru. Sweet! So I start playing with it. While I am a long time Raspberry pi player, I thought it should be pretty straight forward. But it ends up taking me few hours just to figure out how to remote SSH into it.
+Today I recevied a Pi Zero W which I ordered last week from adafruit. Sweet! So I start playing with it. While I am a long time Raspberry pi player, I thought it should be pretty straight forward. But it ends up taking me few hours just to figure out how to remote SSH into it.
 
 Since this is a headless setup, I need to load the OS, enable Wifi and turn on SSH to allow me to remote ssh into it. Just little google I found a very good document showing the detail steps.
 http://desertbot.io/setup-pi-zero-w-headless-wifi/
