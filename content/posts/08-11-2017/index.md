@@ -25,6 +25,6 @@ The whole concept of SoftEther is to virtualizes Ethernet by software-enumeratio
 Pi Zero W is a little tiny device that builds in WiFi. That allows my to run hostaqd to make my Pi a WiFi AP. Meanwhile, it uses the same WiFi card to connect to the Internet and SoftEhter will bridge my local WiFi to remote VPN server throught SSL turnel. So everyone connected my WiFi is automatically protected by VPN! That's probablly the most easy way to use VPN as it is totally transparent to end user.
 
 The overall architecture is shown below. 
-! [Architecture] (https://jackywu.ca/imgs/Pi-VPN.png)
+![Architecture] (https://jackywu.ca/imgs/Pi-VPN.png)
 
 Enough for now. I will have more details about my project in the future blogs.

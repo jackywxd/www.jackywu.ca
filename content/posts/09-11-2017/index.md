@@ -1,6 +1,6 @@
 ---
 title: "Enable multiple DHCP range for multiple NIC with DNSMASQ"
-cover: "/imgs/dnsmasq.png"
+cover: "/imgs/Dnsmasq.png"
 category: "tech"
 tags:
     - Linux
