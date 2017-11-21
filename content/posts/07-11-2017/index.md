@@ -1,5 +1,5 @@
 ---
-title: "Pi Zero W Headless setup"
+title: "Pi Zero W SSH connectivity problem"
 cover: "/imgs/pi-zero-w.jpg"
 category: "tech"
 tags:
@@ -11,52 +11,21 @@ tags:
 date: "07/11/2017"
 ---
 
-# SSH into Raspberry Pi Zero W
+# Pi Zero W Headless setup issue
 
-Today I recevied a Pi Zero W which I ordered last week from adafruit. Sweet! So I start playing with it. While I am a long time Raspberry pi player, I thought it should be pretty straight forward. But it ends up taking me few hours just to figure out how to remote SSH into it.
+Today I recevied a Pi Zero W which I ordered last week from adafruit. Sweet! So I start playing with it. As a long time Raspberry pi player, I thought it should be pretty straight forward to set it up. But it ends up taking me few hours just to figure out how to remote SSH into it.
 
-Since this is a headless setup, I need to load the OS, enable Wifi and turn on SSH to allow me to remote ssh into it. Just little google I found a very good document showing the detail steps.
-http://desertbot.io/setup-pi-zero-w-headless-wifi/
-
-## Enable ssh
-
-For security reasons, ssh is no longer enabled by default. To enable it, run this command:
-```
-touch /Volumes/boot/ssh
-```
-
-### Add Network Info
-Create a new empty file that will hold network info:
+Since this is a headless setup, I need to load the OS, enable Wifi and turn on SSH to allow me to remote ssh into it. Here is a site with all the details how to do it: (http://desertbot.io/setup-pi-zero-w-headless-wifi/). After completed all the configuration, my Pi Zero W was able to boot up and I can find its IP address from my WiFi router. But I kept getting error when I tried to ssh the IP address of Pi Zero W.
 
 ```
-touch /Volumes/boot/wpa_supplicant.conf
-```
-
-Edit the file that you just created and paste this into it (adjusting for the name of your country code, network name and network password):
-
-```
-country=US
-ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-update_config=1
-
-network={
-    ssid="NETWORK-NAME"
-    psk="NETWORK-PASSWORD"
-}
-```
-
-Remind me to login to the other Linux via VirtualBox to edit the sshd config files.
-https://slippytrumpet.io/posts/raspberry-pi-zero-w-setup/
-
-
-```
-XUdeMacBook-Pro:aws-git-backed-gatsby-static-site xudongwu$ ssh pi@192.168.31.132
+ssh pi@192.168.31.132
 Connection closed by 192.168.31.132 port 22
 ```
 
+I even used nmap to make sure port 22 indeed was open:
 
 ```
-XUdeMacBook-Pro:aws-git-backed-gatsby-static-site xudongwu$ nmap 192.168.31.132
+nmap 192.168.31.132
 
 Starting Nmap 7.60 ( https://nmap.org ) at 2017-11-07 17:06 PST
 Nmap scan report for 192.168.31.132
@@ -68,9 +37,11 @@ PORT   STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 8.03 seconds
 ```
 
+So I had no clue what's the problem then. I also turned on the details debug info of ssh but it did not help. It is my first to encounter such wired connectivity problem.
 
 ```
-XUdeMacBook-Pro:~ xudongwu$ ssh -vv pi@192.168.31.132
+ssh -vv pi@192.168.31.132
+
 OpenSSH_7.5p1, LibreSSL 2.5.4
 debug1: Reading configuration data /etc/ssh/ssh_config
 debug1: /etc/ssh/ssh_config line 52: Applying options for *
@@ -103,10 +74,43 @@ debug1: SSH2_MSG_KEXINIT sent
 Connection reset by 192.168.31.132 port 22
 ```
 
-Add below code to rc.local located in /etc folder.
+Then I switched to google for  help. And I came across to this site (https://slippytrumpet.io/posts/raspberry-pi-zero-w-setup/), it reminds me that I could use a Linux running in VirtualBox to look at the Linux partition which is not accessible inside Mac OS. After looked at the logs of Raspbian, finally I found some clues in /var/log/auth.log and I realized the sshd host key was corrupted. 
+
+So I removed the keys in /etc/sshd/ssh_host_*. and I thought sshd will just recreate the host keys after reboot. But actually it did not! I ended up add below command in /etc/rc.local so the sshd host keys will be re-generated after reboot. After that I was able to ssh into my Pi Zero W finally!
+
+```
+sudo dpkg-reconfigure openssh-server
 ```
 
-#/usr/sbin/dpkg-reconfigure openssh-server
+So that's the whole story! It was a good trouble-shooting experience. But next time if I had similar problem, I will just simply re-formate the SD card and load the Raspbian image again.
 
-exit 0
+
+
+# Raspberry Pi Headless Setup
+
+## Enable ssh
+
+For security reasons, ssh is no longer enabled by default. To enable it, run this command:
+```
+touch /Volumes/boot/ssh
+```
+
+### Configure WiFi configuration
+Create a new empty file that will hold network info:
+
+```
+touch /Volumes/boot/wpa_supplicant.conf
+```
+
+Edit the file that you just created and paste this into it (adjusting for the name of your country code, network name and network password):
+
+```
+country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+
+network={
+    ssid="NETWORK-NAME"
+    psk="NETWORK-PASSWORD"
+}
 ```
