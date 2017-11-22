@@ -1,6 +1,6 @@
 ---
 title: "Twilio SIP Trunking 408 Issue"
-cover: "/imgs/Dnsmasq.png"
+cover: "/imgs/twilio-408.png"
 category: "tech"
 tags:
     - Freeswitch
