@@ -29,4 +29,4 @@ sofia global siptrace on
 
 And what I found in the SIP trace is that Twilio gateway for some reason return 408 Request Timeout. I ended up spenting whole day tried to resolve this issue without any luck. I guess today is just not my day. That's just part of life... 
 
-![twilio 408 error](https://jackywu.ca/imgs/twlio-408.png)
+![twilio 408 error](https://jackywu.ca/imgs/twilio-408.png)
