@@ -1,19 +1,21 @@
 ---
-title: "Enable multiple DHCP range for multiple NIC with DNSMASQ"
-cover: "/imgs/Dnsmasq.png"
-category: "tech"
+title: 'Enable multiple DHCP range for multiple NIC with DNSMASQ'
+cover: '/imgs/Dnsmasq.png'
+category: 'tech'
 tags:
-    - Linux
-    - dnsmasq
-    - DHCP
+  - Linux
+  - dnsmasq
+  - DHCP
 
-date: "08/11/2017"
+date: '2017-11-08'
 ---
 
 # Enable multiple DHCP range for multiple NIC with DNSMASQ
+
 Rectenly I need to allocate IP to clients via multiple NICs using dnsmasq in my home server.
 
 Originally I just started multiple dnsmasq daemons with different startup switches, for example:
+
 ```
 dnsmasq --interface=tap_vpn --except-interface=lo --bind-interfaces --dhcp-range=192.168.250.10,192.168.250.100,12h --conf-file=/dev/null
 ```

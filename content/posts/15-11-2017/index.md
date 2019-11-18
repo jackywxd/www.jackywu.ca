@@ -1,13 +1,13 @@
 ---
-title: "Become certified: AWS Certified Solutions Architect – Associate"
-cover: "/imgs/aws-cert.png"
-category: "tech"
+title: 'Become certified: AWS Certified Solutions Architect – Associate'
+cover: '/imgs/aws-cert.png'
+category: 'tech'
 tags:
-    - AWS
-    - Solution Architect
-    - Certification
+  - AWS
+  - Solution Architect
+  - Certification
 
-date: "15/11/2017"
+date: '2017-11-15'
 ---
 
 Today I passed the exam for AWS Certified Solutions Architect - Associate, and offically became certified!
@@ -23,4 +23,4 @@ Since I uses AWS for my daily works, it doesn't take long for me to prepare for 
 
 Talking about the test, total there are 55 questions, multiple choice and multiple answer questions, 80 minutes to complete the exam. Overall the question is not very difficult, some of them are pretty simple as long as you know the name of related AWS services. But some of them do require you have solid knowledge of AWS services. And I suspect one question is tricky question actually has no correct answer, because I am pretty sure all options are wrong for that question.
 
-Anyway, mission accomplished! I guess my next goal will be the AWS Certified Developer – Associate. 
+Anyway, mission accomplished! I guess my next goal will be the AWS Certified Developer – Associate.

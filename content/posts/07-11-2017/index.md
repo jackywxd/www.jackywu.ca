@@ -1,14 +1,14 @@
 ---
-title: "Pi Zero W SSH connectivity problem"
-cover: "/imgs/pi-zero-w.jpg"
-category: "tech"
+title: 'Pi Zero W SSH connectivity problem'
+cover: '/imgs/pi-zero-w.jpg'
+category: 'tech'
 tags:
-    - Raspberry
-    - pi zero w
-    - ssh
-    - wifi
+  - Raspberry
+  - pi zero w
+  - ssh
+  - wifi
 
-date: "07/11/2017"
+date: '2017-11-07'
 ---
 
 # Pi Zero W Headless setup issue
@@ -74,9 +74,9 @@ debug1: SSH2_MSG_KEXINIT sent
 Connection reset by 192.168.31.132 port 22
 ```
 
-Then I switched to google for  help. And I came across to this site (https://slippytrumpet.io/posts/raspberry-pi-zero-w-setup/), it reminds me that I could use a Linux running in VirtualBox to look at the Linux partition which is not accessible inside Mac OS. After looked at the logs of Raspbian, finally I found some clues in /var/log/auth.log and I realized the sshd host key was corrupted. 
+Then I switched to google for help. And I came across to this site (https://slippytrumpet.io/posts/raspberry-pi-zero-w-setup/), it reminds me that I could use a Linux running in VirtualBox to look at the Linux partition which is not accessible inside Mac OS. After looked at the logs of Raspbian, finally I found some clues in /var/log/auth.log and I realized the sshd host key was corrupted.
 
-So I removed the keys in /etc/sshd/ssh_host_*. and I thought sshd will just recreate the host keys after reboot. But actually it did not! I ended up add below command in /etc/rc.local so the sshd host keys will be re-generated after reboot. After that I was able to ssh into my Pi Zero W finally!
+So I removed the keys in /etc/sshd/ssh*host*\*. and I thought sshd will just recreate the host keys after reboot. But actually it did not! I ended up add below command in /etc/rc.local so the sshd host keys will be re-generated after reboot. After that I was able to ssh into my Pi Zero W finally!
 
 ```
 sudo dpkg-reconfigure openssh-server
@@ -84,18 +84,18 @@ sudo dpkg-reconfigure openssh-server
 
 So that's the whole story! It was a good trouble-shooting experience. But next time if I had similar problem, I will just simply re-formate the SD card and load the Raspbian image again.
 
-
-
 # Raspberry Pi Headless Setup
 
 ## Enable ssh
 
 For security reasons, ssh is no longer enabled by default. To enable it, run this command:
+
 ```
 touch /Volumes/boot/ssh
 ```
 
 ### Configure WiFi configuration
+
 Create a new empty file that will hold network info:
 
 ```
