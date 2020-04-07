@@ -1,11 +1,4 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's Starter: Uno
-</h1>
+Jacky Wu New Blog Page
 
 Gatsby starter for creating a blog and showcasing your work with landing pages for earch portfolio item.
 
