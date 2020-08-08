@@ -7,7 +7,7 @@ category: tech
 tags: ["raspberry", "ssh", "pi zero", "wifi"]
 ---
 
-Today I recevied a Pi Zero W which I ordered last week from adafruit. Sweet! So I start playing with it. As a long time Raspberry pi player, I thought it should be pretty straight forward to set it up. But it ends up taking me few hours just to figure out how to remote SSH into it.
+Today I received a Pi Zero W which I ordered last week from adafruit. Sweet! So I start playing with it. As a long time Raspberry pi player, I thought it should be pretty straight forward to set it up. But it ends up taking me few hours just to figure out how to remote SSH into it.
 
 ![image of logo](../../assets/2017/pi-zero-w.jpg)
 

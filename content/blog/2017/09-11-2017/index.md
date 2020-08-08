@@ -7,7 +7,7 @@ category: tech
 tags: ["linux", "dnsmasq", "dhcp"]
 ---
 
-Rectenly I need to allocate IP to clients via multiple NICs using dnsmasq in my home server.
+Recently I need to allocate IP to clients via multiple NICs using dnsmasq in my home server.
 
 Originally I just started multiple dnsmasq daemons with different startup switches, for example:
 

@@ -16,6 +16,11 @@ class Header extends React.Component {
       boxShadow:
         location.pathname === "/work" ? `0px 1px 0px 0px black` : `none`,
     }
+    const runLinkStyle = {
+      paddingBottom: location.pathname === "/run" ? `5px` : `0px`,
+      boxShadow:
+        location.pathname === "/run" ? `0px 1px 0px 0px black` : `none`,
+    }
     const aboutLinkStyle = {
       paddingBottom: location.pathname === "/about" ? `5px` : `0px`,
       boxShadow:
@@ -41,6 +46,13 @@ class Header extends React.Component {
               <h1 className="li-h1" style={workLinkStyle}>
                 <Link className="li-link" to={`/work`}>
                   Work
+                </Link>
+              </h1>
+            </li>
+            <li className="nav-li">
+              <h1 className="li-h1" style={runLinkStyle}>
+                <Link className="li-link" to={`/run`}>
+                  Run
                 </Link>
               </h1>
             </li>

@@ -3,7 +3,7 @@ template: work
 title: autosender
 slug: autosender
 date: "2018-05-01T22:12:03.284Z"
-description: "AutoSender"
+description: "The #1 scheduling message App in Apple Store"
 category: iOS
 link: https://apps.apple.com/ca/app/autosender-automatic-texting/id1375015129
 ---

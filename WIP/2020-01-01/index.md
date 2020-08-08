@@ -1,12 +1,10 @@
 ---
-title: 'Handle Apple Subscription Change'
-cover: 'https://docs-assets.developer.apple.com/published/dcee541a97/65f6ff4c-89cf-4c0a-8871-e14b27113ace.png'
-category: 'programming'
-tags:
-  - Apple Receipt
-  - In-App Purchase Receipt
-
-date: '2019-11-22'
+template: post
+title: How to build Subscription business model on top of Apple Subscription
+slug: how-to-build-subscription-business-model-on-apple-subscription
+date: 2020-01-01
+category: tech
+tags: ["subscription", "apple", "business"]
 ---
 
 # Validate apple receipt vs INIT_BUY:

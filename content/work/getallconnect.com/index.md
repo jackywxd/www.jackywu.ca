@@ -3,7 +3,7 @@ template: work
 title: AllConncect VPN
 slug: allconnect-vpn
 date: "2020-01-01T22:12:03.284Z"
-description: ""
+description: "Cloud VPN + Enterprise VPN Client"
 category: VPN
 link: https://getallconnect.com
 ---
