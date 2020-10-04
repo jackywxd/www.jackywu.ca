@@ -1,3 +1,10 @@
+main {
+  padding: 1rem;
+}
+
+#container {
+  padding: 1rem;
+}
 .topnav {
   overflow: hidden;
 
@@ -59,6 +66,18 @@
   .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    padding: 0;
   }
 }

@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Amazing Grace",
+      "singer": "Matthew Cruice",
+      "cover": "a",
+      "musicSrc": "a"
+    },
+    {
+        "name": "The Way We Were",
+        "singer": "Kenny G",
+        "cover": "a",
+        "musicSrc": "a"
+    },
+    {
+        "name": "You Raise Me Up",
+        "singer": "Kenny G",
+        "cover": "a",
+        "musicSrc": "a"
+    },
+    {
+        "name": "One Day",
+        "singer": "Ten Towers",
+        "cover": "a",
+        "musicSrc": "a"
+    },
+    {
+        "name": "Only This Matters",
+        "singer": "Ten Towers",
+        "cover": "a",
+        "musicSrc": "a"
+    },
+    {
+        "name": "生命的执著",
+        "singer": "我心旋律",
+        "cover": "a",
+        "musicSrc": "a"
+    }
+  ]

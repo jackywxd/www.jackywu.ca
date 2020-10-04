@@ -7,7 +7,18 @@ category: serverless
 tags: ["sls", "deploy", "nodejs", "javascript", "webpack"]
 ---
 
+If you are getting below "Javascript heap out of memory" error when deploying your serverless project, try to run below command first before running "sls deploy":
+```bash
+export NODE_OPTIONS=--max_old_space_size=8192
+```
 
+When my serverless project grows, I am getting this error more often. And this trick works for me every single time.
+
+A little googling reveals that it is an serverless-webpack issue and there is an open issue: 
+[JavaScript heap out of memory when packaging many functions #299](https://github.com/serverless-heaven/serverless-webpack/issues/299). But until it gets fixed, I will stick with this workaround first.
+
+
+### "sls deploy" error messages:
 
 ```bash
 Serverless: Bundling with Webpack...
@@ -25,7 +36,6 @@ Serverless: Bundling with Webpack...
 
     0: ExitFrame [pc: 0x1009ce0f9]
 Security context: 0x19b75e5408d1 <JSObject>
-    2: parseTokenNode(aka parseTokenNode) [0x19b7aaa34c99] [/Users/jackywu/repositories/jackywxd/node_modules/typescript/lib/typescript.js:~20163] [pc=0xd18f6e29f58](this=0x19b7...
 
 FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory
  1: 0x1011bdf85 node::Abort() (.cold.1) [/usr/local/bin/node]
@@ -42,5 +52,5 @@ FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaS
 12: 0x1006887dc v8::internal::Runtime_StackGuard(int, unsigned long*, v8::internal::Isolate*) [/usr/local/bin/node]
 13: 0x1009ce0f9 Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit [/usr/local/bin/node]
 zsh: abort      sls deploy
-export NODE_OPTIONS=--max_old_space_size=8192
 ```
+

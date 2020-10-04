@@ -49,9 +49,11 @@ class Header extends React.Component {
         <Link to={`/`}>Blog</Link>
         <Link to={`/work`}>Work</Link>
         <Link to={`/run`}>Run</Link>
+        <Link to={`/musics`}>Music</Link>
         <Link to={`/about`}>About</Link>
-        <a href="javascript:void(0);" class="icon" onClick={this.myFunction}>
-          <i class="fa fa-bars"></i>
+        <a className="icon" onClick={this.myFunction}>
+          {"MENU "}
+          <i className="fa fa-bars"></i>
         </a>
       </div>
     )

@@ -8,11 +8,11 @@ function Layout({ location, title, children }) {
 
   return (
     <div
+      id="container"
       style={{
         marginLeft: `auto`,
         marginRight: `auto`,
         maxWidth: rhythm(32),
-        padding: `${rhythm(1)} ${rhythm(2 / 4)} 0 ${rhythm(2 / 4)} `,
         fontFamily: `Montserrat`,
       }}
     >
@@ -26,9 +26,6 @@ function Layout({ location, title, children }) {
           border: `0.5px solid #EEEEEE`,
           borderBottom: `0px`,
           borderRadius: `10px 10px 0px 0px`,
-          paddingLeft: `30px`,
-          paddingRight: `30px`,
-          paddingTop: `-20px`,
         }}
       >
         {children}
