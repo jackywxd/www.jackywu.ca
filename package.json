@@ -4,6 +4,7 @@
   "description": "jacky wu blog",
   "version": "1.0.0",
   "dependencies": {
+    "@loadable/component": "^5.13.2",
     "gatsby": "^2.24.63",
     "gatsby-image": "^2.4.19",
     "gatsby-plugin-feed": "^2.5.12",

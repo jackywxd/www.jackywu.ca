@@ -8,10 +8,10 @@ phases:
       - npm install -g gatsby
   pre_build:
     commands:
-      - npm install
+      - yarn
   build:
     commands:
-      - npm run build
+      - yarn build
   post_build:
     commands:
       - aws s3 sync "public/" "s3://$DESTINATION_S3_BUCKET" --delete --acl "public-read"

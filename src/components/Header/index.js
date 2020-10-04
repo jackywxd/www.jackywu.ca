@@ -10,11 +10,14 @@ class Header extends React.Component {
   }
 
   myFunction() {
-    let x = document.getElementById("myTopnav")
-    if (x.className === "topnav") {
-      x.className += " responsive"
-    } else {
-      x.className = "topnav"
+    let x
+    if (typeof document !== "undefined") {
+      x = document.getElementById("myTopnav")
+      if (x.className === "topnav") {
+        x.className += " responsive"
+      } else {
+        x.className = "topnav"
+      }
     }
   }
 

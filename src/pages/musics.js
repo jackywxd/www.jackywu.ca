@@ -1,20 +1,12 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import ReactJkMusicPlayer from "react-jinke-music-player"
-import "react-jinke-music-player/assets/index.css"
+import { graphql } from "gatsby"
 
-import { rhythm } from "../utils/typography"
+import "react-jinke-music-player/assets/index.css"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import loadable from "@loadable/component"
 
-const Music = ({ name, path }) => {
-  return (
-    <>
-      <h3>{name}</h3>
-      <audio src={path} controls />
-    </>
-  )
-}
+const ReactJkMusicPlayer = loadable(() => import("react-jinke-music-player"))
 
 const MusicPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
