@@ -20,3 +20,39 @@ Innovative Elastic VPN Cloud solution by combing the enterprise VPN Client and C
 - Full control of user's dedicated VPN server
 - Modern SSL VPN technology used by Fortune 100 compoines
 - One-click login with client certificate authentication
+
+## Tech Stack
+
+Repo: yarn monorepo
+
+### Frontend
+
+- Static Site: Gatsby
+- Host: AWS S3
+- CDN: AWS CloudFront
+- Language: Typescript
+- Styling: Material UI
+- Framework: React
+- State management: Redux-saga
+
+### Backend
+
+- Language: Typescript
+- Runtime: Node.js
+- Deployment: serverless framework
+- Domain: AWS Route 53
+- Compute: AWS Lambda
+- Network: AWS API Gateway
+- User Management: AWS Cognito
+- Storage: AWS S3
+- Email: AWS SES
+- Database: AWS DynamoDB
+- Compute Node: AWS Lightsail and others VPS vendor
+- User Authentication: FreeRadius
+
+### DevOps
+
+- Source Control: AWS CodeCommit
+- CI/CD: AWS CodePipeline
+- ELK: logz.io
+

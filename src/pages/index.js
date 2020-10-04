@@ -19,21 +19,22 @@ const BlogIndex = ({ data, location }) => {
           <article
             key={node.fields.slug}
             style={{
-              marginTop: `-15px`,
-              marginBottom: `70px`,
+              marginTop: `0`,
+              // marginBottom: `1em`,
             }}
           >
             <header>
               <h3
                 style={{
-                  marginBottom: rhythm(1 / 10),
+                  marginTop:'1rem',
+                   marginBottom: '1rem',
                 }}
               >
                 <Link
                   style={{
                     boxShadow: `none`,
                     color: "#000000",
-                    fontSize: `21px`,
+                    fontSize: `clamp(0.9rem, 6vw, 1.5rem)`,
                     fontWeight: `400`,
                     fontFamily: `Montserrat`,
                   }}
@@ -45,7 +46,7 @@ const BlogIndex = ({ data, location }) => {
               <small
                 style={{
                   color: "#B7B7B7",
-                  fontSize: `11px`,
+                  fontSize: `clamp(0.8rem, 3vw, 1rem)`,
                   fontWeight: `300`,
                 }}
               >
@@ -53,7 +54,7 @@ const BlogIndex = ({ data, location }) => {
               </small>
             </header>
             <section
-              style={{ color: "#888888", fontSize: `17px`, fontWeight: `300` }}
+              style={{ color: "#888888", fontSize: `clamp(0.8rem, 4vw, 1.3rem)`, fontWeight: `300` }}
             >
               <p
                 dangerouslySetInnerHTML={{
