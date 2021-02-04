@@ -16,10 +16,11 @@ Innovative Elastic VPN Cloud solution by combing the enterprise VPN Client and C
 
 ### Features:
 
-- Unlimited server/IP resources powered by Cloud
-- Full control of user's dedicated VPN server
-- Modern SSL VPN technology used by Fortune 100 compoines
-- One-click login with client certificate authentication
+- AllConnect VPN is a distributed Cloud VPN platform built upon with latest tech stacks and various open-sources projects
+- The innovative client-less and disposable VPN server design, PKI-based authentication bring the maximum security to normal people
+- Control plane is a cloud-native system implementation with various AWS services, including Lambda, API Gateway, DynamoDB, SES and etc
+- Data plane is based on OpenConnect server hosted in VPS and AnyConnect Client
+- Subscription business model is implemented with Stripe Payments and Billings
 
 ## Tech Stack
 

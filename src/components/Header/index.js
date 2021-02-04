@@ -47,7 +47,7 @@ class Header extends React.Component {
     return (
       <div className="topnav" id="myTopnav">
         <a className="active" href="/">
-          <img src={logo} alt="22 Boxes logo"></img>
+          <img src={logo} alt="logo"></img>
         </a>
         <Link to={`/`}>Blog</Link>
         <Link to={`/work`}>Work</Link>
